@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login page</title>
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+      
+</head>
+
+<body>
+   <div class="login-hedr">
+ <h1>Welcome Back</h1>
+  <p class="login-subtitle">Sign in to your account to continue shopping</p>
+</div>
+
+   <form class="login-form" id="loginForm">
+
+    <!-- Email -->
+    <label for="email">Email address</label>
+
+    <input
+        type="email"
+        name="email"
+        id="email"
+        placeholder="you@example.com"
+    >
+
+    <span class="error-message" id="emailError"></span>
+
+
+    <!-- Password -->
+    <label for="password">Password</label>
+
+    <div class="password-wrapper">
+
+        <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="••••••••"
+        >
+
+        <button
+            type="button"
+            id="togglePassword"
+            class="password-toggle"
+        >
+            <i class="fa-solid fa-eye"></i>
+        </button>
+
+    </div>
+
+    <span class="error-message" id="passwordError"></span>
+
+
+    <!-- Remember -->
+    <div class="remember">
+
+        <input type="checkbox" id="remember">
+
+        <label for="remember">
+            Remember me
+        </label>
+
+        <a href="#" class="forgot-password">
+            Forgot your password?
+        </a>
+
+    </div>
+
+
+    <br>
+
+
+    <!-- Sign in -->
+    <button type="submit" class="signin-btn">
+        Sign in
+    </button>
+
+
+    <!-- OR -->
+    <p class="or">
+        ----------- or continue with -----------
+    </p>
+
+
+    <!-- Social buttons -->
+    <button type="button" class="social-btn">
+        Google
+    </button>
+
+    <button type="button" class="social-btn">
+        Facebook
+    </button>
+
+
+    <!-- Signup -->
+    <p class="signup">
+        Don't have an account?
+        <a href="/pages/SignUp.html">Sign up</a>
+    </p>
+
+</form>
+
+<script>
+    const password = document.getElementById("password");
+    const togglePassword = document.getElementById("togglePassword");
+
+    togglePassword.addEventListener("click", function () {
+
+        if (password.type === "password") {
+            password.type = "text";
+
+            this.innerHTML = '<i class="fa-solid fa-eye-slash"></i>';
+        } else {
+            password.type = "password";
+
+            this.innerHTML = '<i class="fa-solid fa-eye"></i>';
+        }
+
+    });
+
+    
+  /*========this is the message show Email require and password is requies==========*/
+const loginForm = document.getElementById("loginForm");
+
+loginForm.addEventListener("submit", function (e) {
+
+    e.preventDefault();
+
+    const email = document.getElementById("email");
+    const password = document.getElementById("password");
+
+    const emailError = document.getElementById("emailError");
+    const passwordError = document.getElementById("passwordError");
+
+    // Clear previous errors
+    emailError.textContent = "";
+    passwordError.textContent = "";
+
+    email.classList.remove("error");
+    password.classList.remove("error");
+
+    let isValid = true;
+
+    // Email validation
+    if (email.value.trim() === "") {
+        emailError.textContent = "Email is required";
+        email.classList.add("error");
+        isValid = false;
+    }
+
+    // Password validation
+    if (password.value.trim() === "") {
+        passwordError.textContent = "Password is required";
+        password.classList.add("error");
+        isValid = false;
+    }
+
+    // If everything is valid
+    if (isValid) {
+        console.log("Login successful");
+        
+        // Later you can send the data to your backend here
+    }
+});
+
+</script>
+</body>
+</html>

@@ -1,0 +1,305 @@
+.content-card {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 100px;
+  max-width: 1200px;
+  padding: 4rem 2.5rem;
+  box-sizing: border-box;
+  margin: 70px auto;
+}
+
+.card-links{
+  text-decoration: none;
+  text-decoration-style: none;
+  cursor: pointer;
+}
+
+.content-card .card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  margin: 0 auto;
+  transition-duration: 0.3s;
+  
+}
+
+.content-card .card:hover {
+  scale: 1.1;
+  cursor: pointer;
+  
+}
+
+.content-card .card img {
+  width: auto;
+  height: 250px;
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px ;
+  object-fit: cover;
+  display: block;
+  vertical-align: middle;
+  background-color: rgb(216, 220, 224);
+  padding: 30px ;
+}
+
+/* Title */
+.content-card .card .p-head {
+  font-size: 1.170rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin-top: 0.9rem;
+  line-height: 1.75rem;
+  letter-spacing: .05rem;
+  text-decoration: none;
+  margin-bottom: 10px;
+}
+
+/* Category (2nd <p>) */
+.content-card .card p:nth-of-type(2) {
+  font-size: 1.125rem;
+  font-weight: 400;
+  margin-top: 0.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+}
+
+/* Price (3rd <p>) */
+.content-card .card p:nth-of-type(3) {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin: 0.4rem 0 1rem;
+  color: black;
+}
+
+/* Tablet: 3 columns */
+@media (max-width: 782px) {
+  .content-card {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 100px;
+    margin: 50px;
+  }
+}
+
+/* Small tablet: 2 columns */
+@media (max-width: 778px) {
+  .content-card {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 100px;
+     margin: 50px;
+    
+  }
+}
+
+/* Mobile: tighter spacing */
+@media (max-width: 500px) {
+  .content-card {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 100px;
+    margin: 50px;
+  }
+  .content-card .card .p-head {
+    font-size: 0.85rem;
+  }
+}
+
+
+/* detail file css */
+.detail-wrapper{
+  display: grid;
+  grid-template-columns:  repeat(2, minmax(0, 1fr));;
+  gap: 1rem;
+  box-sizing: border-box;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.back-link{
+  margin-left: 100px;
+}
+
+.image-card{
+background-color: rgb(216, 220, 224);
+ margin: 40px auto;
+   border-radius: 20px;
+   padding: 10px 20px;
+   max-width: 400px;
+   width: 100%;
+   justify-content: center;
+   align-items: center;
+   display: flex;
+}
+
+.detail-wrapper .detail-img{
+  max-width: 250px;
+  height: auto;
+
+}
+
+.thumbnail-row {
+  display: flex;
+  gap: 13px;
+  margin: 10px auto;
+  justify-content: center;
+}
+
+.thumbnail-img {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 8px;
+  background-color: rgb(216, 220, 224);
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: opacity 0.2s;
+  padding: 5px;
+}
+
+.thumbnail-img:hover,
+.thumbnail-img.active {
+  opacity: 0.7;
+}
+
+.detail-wrapper .detail-info{
+  margin-top: 30px;
+ 
+}
+
+.detail-wrapper .detail-info h1{
+  margin-bottom: 20px;
+}
+
+.detail-wrapper .detail-info .product-category{
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 500;
+  color: rgb(75 85 99);
+}
+
+.detail-info .p-price{
+  margin-bottom: 10px;
+  padding: 20px 0px;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.detail-info .p-price hr{
+  margin-bottom: 20px;
+   border-style: solid;
+}
+
+.detail-info .p-description{
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+  margin-bottom: .5rem;
+  padding: 1rem 0px;
+}
+
+.detail-info .detail-desc{
+  margin-bottom: 1rem;
+}
+.detail-info .add-to-cart{
+  width: 100%;
+  background-color: #1e293b;
+  color: white;
+  padding: 1rem;
+  font-size: 1rem;
+  border-radius: 5px;
+   opacity: 1;
+   transition-duration: 0.3s;
+   margin-top: 2rem;
+}
+
+.detail-info .add-to-cart:hover{
+ opacity: 0.6;
+ scale: 1.02;
+ cursor: pointer;
+}
+
+.product-features{
+ background-color:  rgb(243 244 246);
+ margin-top: 1rem;
+ padding: 1rem;
+ box-sizing: border-box;
+ border-radius: 5px;
+}
+
+.product-features ul{
+  margin: 0 0 1rem 0;
+  padding: 10px 15px;
+}
+.product-features ul li{
+  margin-bottom: 5px;
+}
+
+.product-features h2{
+font-size: 1.125rem;
+font-weight: 600;
+font-size: 1.125rem;
+line-height: 1.75rem;
+}
+
+
+
+@media (max-width: 1024px) {
+  .detail-wrapper{
+    gap: 1.5rem;
+  }
+}
+ 
+/* Stack into a single column */
+@media (max-width: 768px) {
+  .detail-wrapper {
+    grid-template-columns: 1fr;
+  }
+ 
+  .image-card{
+    max-width: 100%;
+  }
+ 
+  .detail-wrapper .detail-img {
+    max-width: 100%;
+    width: 100%;
+    padding: 10px 20px;
+    box-sizing: border-box;
+  }
+ 
+  .detail-wrapper .detail-info{
+    margin-top: 20px;
+  }
+}
+ 
+/* Small phones */
+@media (max-width: 480px) {
+  .detail-wrapper{
+    padding: 0 0.75rem;
+    gap: 1rem;
+  }
+ 
+  .back-link{
+    font-size: 0.9rem;
+  }
+ 
+  .image-card{
+    padding: 10px;
+    margin: 15px auto;
+  }
+ 
+  .thumbnail-img{
+    width: 70px;
+    height: 70px;
+  }
+ 
+  .detail-info .p-price{
+    padding: 12px 0px;
+  }
+ 
+  .detail-info .add-to-cart{
+    padding: 0.85rem;
+    font-size: 0.95rem;
+  }
+ 
+  .product-features{
+    padding: 0.75rem;
+  }
+}

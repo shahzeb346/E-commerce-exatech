@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dine Market</title>
+    <!-- Font Awesome 6 (free) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+
+    <!-- ====== NAVBAR ====== -->
+    <section class="navabr-section">
+        <nav class="navbar" role="navigation" aria-label="Main navigation">
+
+            <!-- Logo -->
+            <div class="brand">
+                <i class="fa-solid fa-o"></i>
+                Dine Market
+            </div>
+
+            <!-- Nav Links -->
+            <ul class="nav-links" id="navLinks">
+                <li><a href="/pages/female.html">Female</a></li>
+                <li><a href="/pages/male.html">Male </a></li>
+                <li><a href="/pages/kids.html">Kids </a></li>
+                <li><a href="/pages/products.html">All Products </a></li>
+                <!-- Login / Register -->
+                <div class="auth auth-menu" style="margin-top: 30px;">
+                    <span><a href="/pages/login.html" style="text-decoration: none; color: black;">Login</a></span>
+                    <span class="divider">/</span>
+                    <span>Register</span>
+                </div>
+            </ul>
+
+            <div style="display: flex; gap: 30px;">
+                <!-- cart icon -->
+                <div class="nav-cart" id="cart-button">
+                    <i class="fa-solid fa-cart-plus"></i>
+                    <span>0</span>
+                </div>
+
+                <!-- Login / Register -->
+                <div class="auth">
+                    <span><a href="/pages/login.html" style="text-decoration: none; color: black;">Login</a></span>
+                    <span class="divider">/</span>
+                    <span><a href="/pages/SignUp.html">Register</a></span>
+                </div>
+            </div>
+
+            <!-- Mobile menu button -->
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+
+
+        </nav>
+        <div class="cart-details" id="cart-details">
+            <div class="top-cart-details">
+                <h1>Your Cart</h1>
+                <i class="fa-solid fa-x" id="cart-close"></i>
+            </div>
+            <div class="carts-product">
+                <p>Your cart is empty</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ====== Hero Section ====== -->
+    <section class="hero-section">
+        <div class="left-side">
+            <span>Sale 70%</span>
+            <h1>An Industrial Take On Streetwear</h1>
+            <p>Anyone can beat you but no one can beat your outfit as long as you wear Dine outfits.</p>
+            <button>Start Shopping</button>
+        </div>
+        <div class="right-side">
+            <div>
+                <img src="images/hero-image.webp" alt="hero image">
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== Feature category ====== -->
+    <section class="feature-category">
+        <div>
+            <img src="images/Featured1.webp" alt="feature-1">
+            <img src="images/Featured2.webp" alt="feature-1">
+            <img src="images/Featured3.webp" alt="feature-1">
+            <img src="images/Featured4.webp" alt="feature-1">
+        </div>
+    </section>
+
+
+    <!-- ====== Promotions ====== -->
+    <section class="promotion">
+        <div class="top">
+            <h2>PROMOTIONS</h2>
+            <h1>Our Promotions Events</h1>
+        </div>
+        <div class="promotion-container">
+            <div class="promo-left">
+                <div class="promo-card-1">
+                    <div>
+                        <span>GET UPTO <b>60%</b></span>
+                        <p>For the summer season</p>
+                    </div>
+                    <img src="images/event1.webp" alt="event image">
+                </div>
+                <div class="promo-card-2">
+
+                    <h1>GET 30% OFF</h1>
+                    <p>USE PROMO CODE</p>
+                    <button>DINEWEEKENDABLE</button>
+                </div>
+            </div>
+            <div class="promo-right">
+                <div class="promo-right-card-1">
+                    <div><span>Flex Sweatshirt</span>
+                        <p><del>$100.00 </del><b>$75.00</b></p>
+                    </div>
+
+                    <img src="images/event2.webp" alt="">
+                </div>
+                <div class="promo-right-card-1 color-orange">
+                    <div>
+                        <span>Flex Sweatshirt</span>
+                        <p><del>$100.00</del> <b>$75.00</b></p>
+                    </div>
+                    <img src="images/event3.webp" alt="">
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ====== carousel cards ====== -->
+    <div class="promotion" style="margin-bottom: 0;">
+        <div class="top">
+            <h2>PRODUCTS</h2>
+            <h1>Check What we Have</h1>
+        </div>
+    </div>
+
+    <section class="splide" aria-label="Auto-scrolling Product Carousel" style="max-width: 1200px; margin: 0 auto;">
+        <div class="splide__track">
+            <ul class="splide__list">
+                <!-- Slide 1 -->
+                <li class="splide__slide">
+                    <div class="product-card">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=600&auto=format&fit=crop"
+                            alt="Product 1" class="product-image">
+                        <div class="product-info">
+                            <h3 class="product-title">Leather Handbag</h3>
+                            <p class="product-price">$150</p>
+                        </div>
+                    </div>
+                </li>
+                <!-- Slide 2 -->
+                <li class="splide__slide">
+                    <div class="product-card">
+                        <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600&auto=format&fit=crop"
+                            alt="Product 2" class="product-image">
+                        <div class="product-info">
+                            <h3 class="product-title">Summer Dress</h3>
+                            <p class="product-price">$85</p>
+                        </div>
+                    </div>
+                </li>
+                <!-- Slide 3 -->
+                <li class="splide__slide">
+                    <div class="product-card">
+                        <img src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?w=600&auto=format&fit=crop"
+                            alt="Product 3" class="product-image">
+                        <div class="product-info">
+                            <h3 class="product-title">Canvas Sneakers</h3>
+                            <p class="product-price">$60</p>
+                        </div>
+                    </div>
+                </li>
+                <!-- Slide 4 -->
+                <li class="splide__slide">
+                    <div class="product-card">
+                        <img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?w=600&auto=format&fit=crop"
+                            alt="Product 4" class="product-image">
+                        <div class="product-info">
+                            <h3 class="product-title">Wool Coat</h3>
+                            <p class="product-price">$220</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- ====== unique section ====== -->
+    <div class="unique-section-heading">
+        <h2 class="main-title">Unique and Authentic<br>Vintage Designer<br>Jewellery</h2>
+    </div>
+    <section class="unique-section">
+        <div class="container">
+
+            <!-- LEFT -->
+            <div class="left-col">
+                <div class="watermark">Unique hand made from</div>
+
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <h3>Using Good Quality Materials</h3>
+                        <p>Individuals can enjoy the benefits of comfort, durability, and sustainability in clothing
+                            choices</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>100% Handsome Products</h3>
+                        <p>Using 100% handsome products elevates the grooming and self-care experience to new heights.
+                        </p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Modern Fashion Design</h3>
+                        <p>Modern fashion design is an ever-evolving realm where creativity meets innovation.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Discount for Bulk Orders</h3>
+                        <p>Discounts for bulk orders provide a compelling incentive for businesses.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RIGHT -->
+            <div class="right-col">
+
+                <div class="right-content">
+                    <div class="right-img-container">
+                        <!-- Placeholder image matching the aesthetic -->
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=600&auto=format&fit=crop"
+                            alt="Woman wearing black sweater">
+                    </div>
+                    <div class="right-text-block">
+                        <p>This piece is ethically crafted in our small family-owned workshop in Peru with unmatched
+                            attention to detail and care. The Natural color is the actual natural color of the fiber,
+                            undyed and 100% traceable.</p>
+                        <button class="shop-btn">See All Products</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== newsletter ====== -->
+    <section class="newsletter-section">
+        <div class="container-newzlater ">
+            <h2 class="newsletter-title">Subscribe Our Newsletter</h2>
+            <p class="newsletter-subtitle">Get the latest information and promo offers directly</p>
+
+            <form class="form-wrapper">
+                <input type="email" class="email-input" placeholder="Enter email address" required>
+                <button type="submit" class="submit-btn">Get Started</button>
+            </form>
+        </div>
+    </section>
+
+
+    <!-- ====== FOOTER ====== -->
+    <footer class="footer" style="margin-top: 200px;">
+        <div class="footer-container">
+
+            <!-- Brand -->
+            <div class="footer-brand">
+                <h2 class="brand-name brand"><i class="fa-solid fa-o"></i> Dine Market</h2>
+                <p class="brand-desc">
+                    Small, artisan label that offers a thoughtfully
+                    curated collection of high quality everyday essentials
+                    made.
+                </p>
+                <div class="brand-icons">
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <!-- Company -->
+            <div class="footer-col">
+                <h3 class="col-title">Company</h3>
+                <ul class="col-links">
+                    <li><a href="/pages/about.html">About</a></li>
+                    <li><a href="#">Terms of use</a></li>
+                    <li><a href="#">Privacy policy</a></li>
+                    <li><a href="#">How it works</a></li>
+                    <li><a href="/pages/contact.html">Contact us</a></li>
+                </ul>
+            </div>
+
+            <!-- Support -->
+            <div class="footer-col">
+                <h3 class="col-title">Support</h3>
+                <ul class="col-links">
+                    <li><a href="#">Support Center</a></li>
+                    <li><a href="#">24h Services</a></li>
+                    <li><a href="#">Quick Chat</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact -->
+            <div class="footer-col">
+                <h3 class="col-title">Contact</h3>
+                <ul class="col-links">
+                    <li><a href="#">Whatsapp</a></li>
+                    <li><a href="#">Support 24h</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </footer>
+    <hr>
+
+    <!-- copyright -->
+    <div class="copyright">
+        <p>Copyright © 2024 Dine Market</p>
+        <p>Design by: <b>Amjad</b></p>
+        <p>Code by: <b>Amjad</b></p>
+    </div>
+
+
+    <!-- Splide JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            new Splide('.splide', {
+                type: 'loop',
+                perPage: 3,
+                perMove: 1,
+                gap: 50,
+                autoplay: true,
+                interval: 3000,
+                pauseOnHover: true,
+                pauseOnFocus: true,
+                breakpoints: {
+                    1024: { perPage: 2, gap: 30 },
+                    640: { perPage: 1, gap: 10 },
+                }
+            }).mount();
+        });
+    </script>
+    </script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
